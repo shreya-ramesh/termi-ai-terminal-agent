@@ -1,0 +1,12 @@
+[
+  {
+    "timestamp": "2025-07-14T20:00:01.314078",
+    "prompt": "show abc folder",
+    "command": "ls abc"
+  },
+  {
+    "timestamp": "2025-07-14T20:03:28.307222",
+    "prompt": "",
+    "command": "exit"
+  }
+]
