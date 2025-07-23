@@ -21,12 +21,50 @@ Termi is a terminal-based AI assistant that converts natural language into execu
 - Not supported on native Windows or macOS (yet)
 
 ---
+##  Project Structure
+<pre>
+Termi/
+├── config/
+│   └── env.py                # Loads .env and Groq API key
+│
+├── core/                     # Core agent logic
+│   ├── agent.py              # Handles prompt parsing and mode logic
+│   ├── error_explainer.py    # LLM-based error explanation
+│   ├── executor.py           # Runs shell commands
+│   ├── explainer.py          # Command explanation module
+│   ├── intent.py             # Maps intent to command
+│   ├── memory.py             # Persistent memory manager
+│   └── settings.py           # settings logic
+│
+├── db/
+│   └── history.json          # Persistent prompt-command history
+│
+├── README.md                
+├── main.py                   # Main terminal assistant logic
+├── requirements.txt
+└── settings.json             # mode setup
+</pre>
 
 ## Quick Setup
 
+Clone the repository:
 ```bash
 git clone https://github.com/your-username/Termi.git
 cd Termi
-pip install -r requirements.txt
-cp .env.example .env   # Add your Groq API key to this file
+```
+Set up your environment:
+```bash
+cp .env.example .env
+```
+Then open .env and add your Groq API key:
+```bash
+GROQ_API_KEY=your_groq_api_key_here
+```
+Launch the assistant:
+```bash
 python3 main.py
+```
+---
+## Contact
+For queries or collaborations: shreya.ramesh22@gmail.com
+
